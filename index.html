@@ -1,82 +1,81 @@
 <!DOCTYPE html>
 
-<html lang="en" style="height:100%;">
+<html style="height:100%; width:100%;">
 
 	<head>
-		
+	
 		<meta charset="UTF-8">
 		<title>Nigel Goss</title>
 		<link rel="icon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-		
+	
 		<style>
-			button { padding:10px; font-size:1.2rem; border:1px solid #768692; background-color:#FFFFFF; border-Radius:5px; cursor:pointer; color:inherit; }
-			content { scroll-snap-align:center; margin-right:50px; overflow:auto; box-sizing:border-box; width:100%; flex:0 0 auto; padding:0 10px 10px 10px; background-color:#FFFFFF; }
 			h1, h2, h3 { margin:0; }
-			h2 { padding-bottom:10px; }
-			a { color:#FFFFFF; }
+			main::-webkit-scrollbar { width:0; height:0; }
+			button { padding:10px; font-size:1.2rem; border:1px solid #768692; background-color:#FFFFFF; border-Radius:5px; cursor:pointer; color:inherit; font-variant:small-caps; }
+			section { height:100%; width:100%; padding:20px; scroll-snap-align:center; border-radius:0 0 50px 50px; background-color:#EEEEEE; overflow-y:hidden; display:grid; grid-template-rows:auto 1fr; box-sizing:border-box; }
+			h2 { text-align:center; font-variant:small-caps; text-decoration:underline; }
+			article { overflow-y:auto; }
 			hr { width:75%; }
-			li, p { padding:20px; }
+			li, p { padding:10px; }
+			a { color:#FFFFFF; }
 		</style>
 		
 		<script>
-		
-			const nav = ($pg) => {
-				document.querySelector("#"+$pg).scrollIntoView({behavior:"smooth"});
-			};
 			
 			window.addEventListener("load", () => {
-				setTimeout(() => { document.body.style.opacity = 1; }, 500);
+				setTimeout(() => { document.body.style.opacity = 1; }, 100);
 			});
+			
+			const goTo = $ele => {
+				document.querySelector("#"+$ele).scrollIntoView({behavior:"smooth"});
+			};
 		
 		</script>
-
+	
 	</head>
 	
-	<body style="margin:0; height:100%; background-color:#768692; padding:20px; display:grid; grid-template-rows:200px auto 1fr; font-family:Helvetica; box-sizing:border-box; color:#768692; opacity:0; transition:opacity 1s;">
+	<body style="font-family:Helvetica; margin:0; display:grid; grid-template-rows:200px 1fr; height:100%; width:100%; background-color:grey; padding:10px; box-sizing:border-box; color:#768692; opacity:0; transition:opacity 1s;">
 	
-		<header style="background-color:#005EB8; border-radius:30px 30px 0 0; padding:20px; display:grid; grid-template-columns:auto auto; justify-content:space-around; color:#FFFFFF; align-items:center; background-image: url('https://pbs.twimg.com/profile_banners/1148720481098510336/1562715298/1500x500'); background-size:cover;">
+		<header style="background-color:#005EB8; border-radius:50px 50px 0 0; display:grid; grid-template-rows:auto auto; background-image: url('https://pbs.twimg.com/profile_banners/1148720481098510336/1562715298/1500x500'); background-size:cover;">
 		
-			<img width="150" height="150" src="https://pbs.twimg.com/profile_images/1148735502876663808/akS7qA0F_200x200.jpg" style="border:5px solid #FFFFFF; border-radius:100%;" />
-			
-			<div style="font-size:1.5em;">
-				<h1>Nigel Goss</h1>
-				<h3>Full-Stack Web App Developer</h3>
-				<a href="https://twitter.com/appdevx">@appDevX</a>  <a href="mailto:nigel.goss@nhs.net">nigel.goss@nhs.net</a>
+			<div style="display:grid; grid-template-columns:4fr 1fr; align-items:center; place-items:center;">
+				<div style="color:#FFFFFF;">
+					<h1>Nigel Goss</h1>
+					<h3>Full-Stack Web App Developer</h3>
+					<a href="https://twitter.com/appdevx">@appDevX</a>  <a href="mailto:nigel.goss@nhs.net">nigel.goss@nhs.net</a>
+				</div>
+				<img width="100" height="100" src="https://pbs.twimg.com/profile_images/1148735502876663808/akS7qA0F_200x200.jpg" style="border:5px solid #FFFFFF; border-radius:100%;">
 			</div>
+			
+			<nav style="border-radius:50px 50px 0 0; background-color:#EEEEEE; display:grid; place-items:center; grid-template-columns:repeat(5, auto); justify-content:space-around;">
+				<button onpointerdown="goTo('s1');">About Me</button>
+				<button onpointerdown="goTo('s2');">Professional Development</button>
+				<button onpointerdown="goTo('s3');">Employment History</button>
+				<button onpointerdown="goTo('s4');">Education</button>
+				<button onpointerdown="goTo('s5');">Projects</button>
+			</nav>
 		
 		</header>
-
-		<nav style="display:grid; grid-template-columns:repeat(5, auto); justify-content:space-around; background-color:#E8EDEE; padding:20px;">
-			<button onpointerdown="nav('slide-1');">About Me</button>
-			<button onpointerdown="nav('slide-2');">Professional Development</button>
-			<button onpointerdown="nav('slide-3');">Employment History</button>
-			<button onpointerdown="nav('slide-4');">Education</button>
-			<button onpointerdown="nav('slide-5');">Projects</button>
-		</nav>
-
-		<main style="display:flex; overflow-y:hidden; background-color:#E8EDEE; padding:0 10px 10px 10px; border-radius:0 0 30px 30px;">
 		
-			<article style="display:flex; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; scroll-behavior:smooth; background-color:#E8EDEE;">
+		<main style="scroll-snap-type:x mandatory; height:100%; width:100%; overflow-x:auto; display:grid; grid-gap:10px; grid-template-columns:repeat(5, 100%);">
 		
-				<content>
-					<h2 id="slide-1">About Me</h2>
+			<section>
+				<h2>About Me</h2>
+				<article><span id="s1" />
 				
 <p><strong>Personal</strong> I'm happily married to a fantastic wife and have two wonderful children. My interest in computing started as a child when I was captivated by being able to type in BASIC code and make the computer do as I wanted. My fascination has never dwindled and I'm still amazed at how computing enables the what was previously thought of as impossible. I've spent the majority of my career working for the NHS as I value being able to make others' lives better.</p>
-
 <hr>
-
 <p><strong>Technologies</strong> I regularly work with Git, AWS, Docker, Docker-Compose, HTML, CSS, JavaScript, PHP, Cordova, TSQL and IIS. I also have experience with Azure, C#, ASP.net, MySQL and NodeJS</p>
-
 <hr>
-
 <p><strong>Interests</strong> I have a keen interest in DevOps and Cloud. I can regularly be found tinkering with the latest technology that has peaked my curiosity. I enjoy spending time with my family, cars, music and cinema. In an attempt to stay healthy I enjoy walking and cycling.</p>
+
+				</article>
+			</section>
+		
+			<section>
+				<h2>Professional Development</h2>
+				<article><span id="s2" /><ul>
 				
-				</content>
-				
-				<content>
-					<h2 id="slide-2">Professional Development</h2>
-					
-<ul>
 <li><strong>AWS Certified Cloud Practitioner</strong> AWS Training and Certification <em>Feb 2021</em></li>
 <li><strong>AWS Cloud Practitioner Essentials</strong> AWS Training and Certification <em>Sep 2020</em></li>
 <li><strong>Beauty Therapist Diploma - Distinction</strong> Centre of Excellence <em>Aug 2020</em></li>
@@ -89,13 +88,14 @@
 <li><strong>MSC Training Course</strong> Metroploitain Police <em>Feb 2007</em><br>Public Order Act; Criminal Attempts Act; Human Rights Act; Police & Criminal Evidence Act; Stopping Vehicles & Speaking to Drivers; Breach of the Peace; Traffic Incidents; Going Equipped to Steal; Process by Summons; Criminal Damage; Drunkenness; Assaults; Domestic Violence; Evidence & Actions Book; Offensive Weapons; Articles with Points & Blades; Policing Safely; Penalty Notices for Disorder; Hate Crime; Theft; Property Lost & Found; Pocket Book Rules; Investigation; Rights, Fairness & Responsibilities; Stop & Search; Stop & Account; Discretion; Arrest Powers; Arrest Procedure & Initial Detention; Detention, Questioning & Treatment; Metropolitan Police District; Personal Radios; Self-defined Ethnicity</li>
 <li><strong>Certificate in Training Delivery Skills</strong> The Training Foundation <em>Jan 2007</em><br>Assessment of Strengths; The Self-fulfilling Prophecy & Body Language; Using Questions in Training; Writing Learning Objectives; Preparing your Training Session; Using Visual Aids; The Skills Development Cycle; Project</li>
 <li><strong>European Computer Driving Licence (ECDL)</strong> British Computer Society <em>Apr 2005</em><br>Basic Concepts of Information Technology; Using the Computer & Managing Files; Word Processing (Microsoft Word); Spreadsheets (Microsoft Excel); Database (Microsoft Access); Presentation (Microsoft PowerPoint); Information & Communication; Using IT</li>
-</ul>
-					
-				</content>
 				
-				<content>
-					<h2 id="slide-3">Employment History</h2>
-
+				</ul></article>
+			</section>
+			
+			<section>
+				<h2>Employment History</h2>
+				<article><span id="s3" />
+				
 <p><strong>Application Development Manager</strong> The Hillingdon Hospitals NHS Foundation Trust <em>May 2018 - Present</em><br>
 <br>Explaination of main duties</p>
 
@@ -105,25 +105,27 @@
 <br>Explaination of main duties</p>
 
 <hr>
-						
+
 <p><strong>Senior Information Analyst</strong> The Hillingdon Hospitals NHS Foundation Trust <em>Feb 2010 - Apr 2015</em><br>
 <br>I was responsible for the timely and accurate completion of statutory returns and submission of mandated datasets to various external bodies in various formats, including the XML NHS standard. This required me to keep abreast of, and interpret, current information standards, reporting requirements and information policy. I also had responsibility for the design and ongoing development of the trust's in-house management information data warehouse and web-based reporting system (T-SQL and C# ASP.net). This involved data manipulation from a variety of sources, data validation and the writing of views, functions and stored procedures. When required, I was responsible for compiling data for Freedom of Information requests and other ad-hoc data requests. The position included line management responsibility for one Information Analyst.</p>
 
 <hr>
-						
+
 <p><strong>IT Systems Trainer</strong> The Hillingdon Hospitals NHS Foundation Trust <em>Feb 2007 - Jan 2010</em><br>
 <br>I was responsible for developing and delivering in-house training programmes and training guides to meet the needs of individuals and groups of Trust staff. This involved delivering training across a spectrum of skill levels and mixed ability groups. I was also accountable for managing the ECDL programme in accordance with the British Computer Society regulations. This included ensuring that candidates were fully registered with the British Computer Society, all aspects of training, administration, invigilation of examinations and the recording of full and accurate data. I was also involved in the project planning of training for the implementation of new systems, both clinical and non-clinical, across the Trust. I was given the role of lead trainer for three systems.</p>
 
 <hr>
-						
+
 <p><strong>Special Constable (Volunteer)</strong> Metropolitan Police <em>Feb 2007 - Jan 2010</em><br>
-<br>As a Special Constable for the Metropolitan Police I had the same duties, powers and responsibilities as a regular Constable. I made arrests and followed them through the booking-in, interview, charging and releasing processes. I was also involved with drug raids, burglary investigations and anti-terrorism Stop & Searches.</p>
-				
-				</content>
+<br>As a Special Constable for the Metropolitan Police I had the same duties, powers and responsibilities as a regular Constable. I made arrests and followed them through the booking-in, interview, charging and releasing processes. I was also involved with drug raids, burglary investigations and anti-terrorism Stop & Searches.</p>	
+
+				</article>
+			</section>
 			
-				<content>
-					<h2 id="slide-4">Education</h2>
-					
+			<section>
+				<h2>Education</h2>
+				<article><span id="s4" />
+				
 <p><strong>BSc (Hons) Computer Science - First Class</strong> University of Westminster <em>Sep 2005 - May 2009</em><br>
 <br>Perspectives of Computer Science; Introduction to Computer Programming I; ICT Tools & Systems; Database Introduction; Information Fundamentals; Introduction to Computer Programming II; Database Theory & Practise; Computer Organisation & System Software; Systems Analysis; Rapid Applications Development I; Database Systems Development; Digital Media Tools; Rapid Applications Development II; Comparative Information Systems Methodologies; Business Enabling Systems; Network Operations; Project Management I; E-Commerce & Intranet Systems; Project Management II; E-Commerce Systems Implementation; Project I; Internet Server Solutions; Computer Security; Project II</p>
 
@@ -136,12 +138,14 @@
 
 <p><strong>GCSEs</strong> Watford Grammar School for Boys <em>Sep 1998 - Jul 2000</em><br>
 <br>Mathematics	- A*; Physics - A*; German - A*; Chemistry - A; English Language - A; English Literature - A; French - A; Biology - B; Geography - B</p>
-					
-				</content>
 				
-				<content>
-					<h2 id="slide-5">Projects</h2>
-					
+				</article>
+			</section>
+			
+			<section>
+				<h2>Projects</h2>
+				<article><span id="s5" />
+				
 <p><strong>Hillingdon Care Record</strong> Electronic Patient Record with 1,200 distinct users and over 200,000 transactions per month<br>
 <br>What is it...</p>
 
@@ -198,13 +202,12 @@
 <li><strong>Public Facing Phelbotomy Bookings</strong> Details to follow...</li>
 <li><strong>FITMask Servicing</strong> Details to follow...</li>
 </ul>
-					
-				</content>
 				
-			</article>
-				
+				</article>
+			</section>
+			
 		</main>
-
+		
 	</body>
 	
 </html>
