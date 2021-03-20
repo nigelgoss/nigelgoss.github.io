@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html style="height:100%; width:100%;">
+<html style="height:100%; width:100%;" class="no-js">
 
 	<head>
 	
@@ -9,6 +9,7 @@
 		<link rel="icon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
 	
 		<style>
+			html:not(.no-js) body { opacity:0; } 
 			h1, h2, h3 { margin:0; }
 			main::-webkit-scrollbar { width:0; height:0; }
 			button { padding:10px; font-size:1.2rem; border:1px solid #768692; background-color:#FFFFFF; border-Radius:5px; cursor:pointer; color:inherit; font-variant:small-caps; }
@@ -22,6 +23,8 @@
 		
 		<script>
 			
+			document.documentElement.classList.remove("no-js");
+			
 			window.addEventListener("load", () => {
 				setTimeout(() => { document.body.style.opacity = 1; }, 100);
 			});
@@ -34,7 +37,7 @@
 	
 	</head>
 	
-	<body style="font-family:Helvetica; margin:0; display:grid; grid-template-rows:200px 1fr; height:100%; width:100%; background-color:grey; padding:10px; box-sizing:border-box; color:#768692; opacity:0; transition:opacity 1s;">
+	<body style="font-family:Helvetica; margin:0; display:grid; grid-template-rows:200px 1fr; height:100%; width:100%; background-color:grey; padding:10px; box-sizing:border-box; color:#768692; transition:opacity 1s;">
 	
 		<header style="background-color:#005EB8; border-radius:50px 50px 0 0; display:grid; grid-template-rows:auto auto; background-image: url('https://pbs.twimg.com/profile_banners/1148720481098510336/1562715298/1500x500'); background-size:cover;">
 		
