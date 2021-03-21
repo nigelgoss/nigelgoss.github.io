@@ -25,11 +25,12 @@
 			@media print {
 				nav { display:none; }
 				i { display:none; }
+				main { display:block; }
 			}
 			
 			@media screen {
 				nav { display:grid; }
-				main { overflow-x:auto; grid-template-columns:repeat(5, 100%); }
+				main { display:grid; }
 			}
 			
 		</style>
@@ -73,7 +74,7 @@
 		
 		</header>
 		
-		<main style="scroll-snap-type:x mandatory; display:grid; grid-gap:10px;">
+		<main style="scroll-snap-type:x mandatory; overflow-x:auto; grid-template-columns:repeat(5, 100%); grid-gap:10px;">
 		
 			<section>
 				<h2>About Me</h2>
