@@ -1,261 +1,382 @@
 <!DOCTYPE html>
-
-<html lang="en" style="height:100%; width:100%;" class="no-js">
+<html lang="en" style="font-size:14px; font-family:FontAwesome, Titillium Web, Helvetica;">
 
 	<head>
-	
 		<meta charset="UTF-8">
-		<title>Nigel Goss</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="icon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
-	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Curriculum Vitae</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Titillium+Web&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
 		<style>
-			html:not(.no-js) body { opacity:0; } 
-			i { vertical-align:middle; color:#768692; }
-			a { color:inherit; }
-			h1, h2, h3 { margin:0; }
-			main::-webkit-scrollbar { width:0; height:0; }
-			button { padding:10px; font-size:1.2rem; border:1px solid #768692; background-color:#FFFFFF; border-Radius:5px; cursor:pointer; color:inherit; font-variant:small-caps; }
-			section { padding:20px; scroll-snap-align:center; overflow-y:hidden; grid-template-rows:auto 1fr; box-sizing:border-box; }
-			h2 { text-align:center; font-variant:small-caps; text-decoration:underline; }
-			article { overflow-y:auto; scroll-padding-top:100px; max-width:1000px; justify-self:center; }
-			hr { width:75%; }
-			li, p { padding:10px; }
-			p { text-align:justify; }
-			
-			.t { padding-right:40px; }
-			span:not(:last-child) { padding-right:15px; }
-			
-			@media print {
-				i { display:none !important; }
-				main { display:block; }
-				nav { display:none; }
+		
+			:root {
+				--c1: #768692;
+				--c2: #005EB8;
+				--c3: #003087;
+				--c4: #E8EDEE;
+				--c5: #003087;
 			}
 			
-			@media screen {
-				body { height:100%; display:grid; background-color:grey; }
-				main { display:grid; }
-				nav { display:grid; }
-				section { border-radius:0 0 50px 50px; display:grid; background-color:#EEEEEE; }
+			h1 { font-variant:small-caps; font-size:3rem; margin:0; letter-spacing:3px; padding:0.5em 0; }
+			h2 { font-variant:small-caps; font-size:2rem; margin:0; padding:0.5em 0; }
+			h3 { font-variant:small-caps; font-size:1.5rem; margin:0; padding:0.5em 0; }
+			
+			p { margin:0; font-family:Anonymous Pro, Monospace; line-height:1.3em; }
+			p + p { margin-top:0.5em; }
+			
+			aside a { color:#FFFFFF; }
+			section a { text-decoration:none; }
+			
+			section h1, section h2 { color:var(--c5); }
+			
+			div.line { border-left:2px solid var(--c5); }
+			div.dot { width:1em; height:1em; background-color:var(--c5); border-radius:50%; position:absolute; transform:translateX(calc(-1em - 50% - 1px)); box-sizing:border-box; border:2px solid #FFFFFF; }
+			div.hr { border:1px solid var(--c3); border-radius:999px; }
+			
+			body { background-color:var(--c1); }
+			main { grid-template-columns:min-content 1fr; }
+			
+			@media only screen and (max-width: 500px) {
+				main { grid-template-columns:none; }
+			}
+			
+			@media only print {
+				body { background-color:transparent; }
+				main { width:100%; }
 			}
 			
 		</style>
-		
-		<script>
-			
-			document.documentElement.classList.remove("no-js");
-			
-			window.addEventListener("load", () => {
-				setTimeout(() => { document.body.style.opacity = 1; }, 100);
-			});
-			
-			const goTo = $ele => {
-				document.querySelector("#"+$ele).scrollIntoView({behavior:"smooth"});
-			};
-		
-		</script>
-	
 	</head>
+
+	<body style="margin:0;">
 	
-	<body style="font-family:Helvetica; margin:0; grid-template-rows:200px 1fr; padding:10px; box-sizing:border-box; color:#768692; transition:opacity 1s;">
-	
-		<header style="background-color:#005EB8; border-radius:50px 50px 0 0; display:grid; grid-template-rows:auto auto; background-image:url('https://pbs.twimg.com/profile_banners/1148720481098510336/1562715298/1500x500'); background-size:cover;">
-		
-			<div style="display:grid; grid-template-columns:4fr 1fr; align-items:center; place-items:center;">
-				<div style="color:#FFFFFF; justify-self:end;">
-					<h1>Nigel Goss</h1>
-					<h3>Full-Stack Web App Developer</h3>
-					<a href="https://twitter.com/appdevx">@appDevX</a> &emsp; &emsp; <a href="mailto:nigel.goss@nhs.net">nigel.goss@nhs.net</a>
+		<main style="display:grid; min-height:100vh; width:min(210mm, 100%); margin:0 auto; padding:1em; box-sizing:border-box;">
+			
+			<aside style="padding:1em; color:#FFFFFF; background-color:var(--c3);">
+			
+				<img src="https://pbs.twimg.com/profile_images/1148735502876663808/akS7qA0F_200x200.jpg" alt="" style="box-sizing:border-box; width:clamp(0px, 100%, 200px); aspect-ratio:1; border-radius:50%; border:10px solid var(--c2); display:block; margin:auto;">
+				
+				<h1 style="text-align:center;">Nigel Goss</h1>
+				
+				<h2 style="text-align:center;">Full Stack Application Developer</h2>
+				
+				<div>
+					<h3>Skills</h3>
+					<div>&#xf00c;&nbsp;Javascript</div>
+					<div>&#xf00c;&nbsp;HTML</div>
+					<div>&#xf00c;&nbsp;CSS</div>
+					<div>&#xf00c;&nbsp;PHP</div>
+					<div>&#xf00c;&nbsp;T-SQL</div>
+					<div>&#xf00c;&nbsp;IIS</div>
+					<div>&#xf00c;&nbsp;Git</div>
+					<div>&#xf00c;&nbsp;AWS</div>
+					<div>&#xf00c;&nbsp;Docker</div>
+					<div>&#xf00c;&nbsp;Docker Compose</div>
 				</div>
-				<img width="100" height="100" src="https://pbs.twimg.com/profile_images/1148735502876663808/akS7qA0F_200x200.jpg" style="border:5px solid #FFFFFF; border-radius:100%;">
-			</div>
-			
-			<nav style="border-radius:50px 50px 0 0; background-color:#EEEEEE; place-items:center; grid-template-columns:repeat(5, auto); justify-content:space-evenly;">
-				<button onpointerdown="goTo('s1');">About Me</button>
-				<button onpointerdown="goTo('s2');">Professional Development</button>
-				<button onpointerdown="goTo('s3');">Employment History</button>
-				<button onpointerdown="goTo('s4');">Education</button>
-				<button onpointerdown="goTo('s5');">Projects</button>
-			</nav>
-		
-		</header>
-		
-<main style="scroll-snap-type:x mandatory; overflow-x:auto; grid-template-columns:repeat(5, 100%); grid-gap:10px;">
-		
-<section><h2>About Me</h2><article>
-
-<p id="s1"><strong class="t">Personal</strong>I'm happily married to a fantastic wife and have two wonderful children. My interest in computing started as a child when I was captivated by being able to type in BASIC code and make the computer do as I wanted. My fascination has never dwindled and I'm still amazed at how computing enables the what was previously thought of as impossible. I've spent the majority of my career working for the NHS as I value being able to make others' lives better.</p>
-
-<hr>
-
-<p><strong class="t">Technologies</strong>I regularly work with Git, AWS, Docker, Docker-Compose, HTML, CSS, JavaScript, PHP, Cordova, T-SQL and IIS. I also have experience with Azure, C#, ASP.net, MySQL and Node.js</p>
-
-<hr>
-
-<p><strong class="t">Interests</strong>I have a keen interest in DevOps and Cloud. I can regularly be found tinkering with the latest technology that has peaked my curiosity. I enjoy spending time with my family, cars, music and cinema. In an attempt to stay healthy I like to walk and cycle.</p>
-
-<hr>
-
-<p><strong class="t">Organisation membership</strong><span>&bull;&nbsp;British Computer Society&nbsp;<a href="https://www.bcs.org/" target="_blank"><i class="material-icons">link</i></a></span> 
-<span>&bull;&nbsp;Mensa&nbsp;<a href="https://www.mensa.org.uk/" target="_blank"><i class="material-icons">link</i></a></span></p>
-
-<hr>
-
-<p><strong>Awards</strong><ul>
-<li><strong>Outstanding Teamwork Award - Non Clinical (Runner Up)</strong> <a href="resources/staff-awards-2019.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; Staff Awards &emsp; <em>Jun 2019</em></li>
-<li><strong>HackFest (2<sup>nd</sup> Place)</strong> &emsp; Digital Health Rewired &emsp; <em>Mar 2019</em></li>
-<li><strong>HackFest (3<sup>rd</sup> Place)</strong> &emsp; Digital Health Summer School &emsp; <em>Jul 2018</em></li>
-<li><strong>Chairman's Innovation Award (Winner)</strong> <a href="resources/staff-awards-2018.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; Staff Awards &emsp; <em>May 2018</em></li>
-<li><strong>Enhancing Care by Sharing Data and Information (Shortlisted)</strong> &emsp; HSJ Awards &emsp; <em>Nov 2016</em></li>
-<li><strong>Part-time Continuing Scholarship</strong>&nbsp;<a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; University of Westminster &emsp; <em>Sep 2008</em></li>
-</p>
-
-</article></section>
-
-<section><h2>Professional Development</h2><article><ul id="s2">
-
-<li><strong>AWS Certified Cloud Practitioner</strong> <a href="resources/aws-certified-cloud-practitioner.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; AWS Training and Certification &emsp; <em>Feb 2021</em></li>
-
-<li><strong>AWS Cloud Practitioner Essentials</strong> <a href="resources/aws-cloud-practitioner-essentials.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; AWS Training and Certification &emsp; <em>Feb 2021</em></li>
-
-<li><strong>AWS Cloud Practitioner Essentials Day</strong> <a href="resources/aws-cloud-practitioner-essentials-day.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; AWS &emsp; <em>Sep 2020</em></li>
-	
-<li><strong>Beauty Therapist Diploma - Distinction</strong> <a href="resources/beauty-therapist-diploma.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; Centre of Excellence &emsp; <em>Aug 2020</em></li>
-
-<li><strong>Foundation Certificate in Business Analysis</strong> <a href="resources/foundation-certificate-in-business-analysis.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Jun 2019</em></li>
-
-<li><strong>Safer Design and Implementation</strong> <a href="resources/safer-design-and-implementation.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; NHS Digital &emsp; <em>Jun 2018</em></li>
-
-<li><strong>NEWS2</strong> <a href="resources/news2.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; National Early Warning Score &emsp; <em>Feb 2018</em></li>
-
-<li><strong>Clinical Risk Management</strong> <a href="resources/clinical-risk-management-training.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; NHS Digital &emsp; <em>Mar 2017</em></li>
-
-<li><strong>Leadership Foundations</strong> <a href="resources/leadership-foundations.pdf" target="_blank"><i class="material-icons">attachment</i></a> &emsp; NHS Leadership Academy &emsp; <em>Sep 2014</em></li>
-
-<li><strong>Developing Web Applications using Microsoft Visual Studio 2008</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; Microsoft &emsp; <em>Oct 2010</em></li>
-
-<li><strong>BCS Level 1 Award in IT User Skills</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Nov 2009</em></li>
-
-<li><strong>ECDL Approved Centre Staff Training Programme</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Dec 2008</em></li>
-
-<li><strong>PRINCE II Foundation</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; APM Group Ltd &emsp; <em>Oct 2008</em></li>
-
-<li><strong>European Computer Driving Licence (ECDL) Expert</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Aug 2008</em><p>
-<span>&bull;&nbsp;Advanced Word Processing (Microsoft Word) <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a></span>
-<span>&bull;&nbsp;Advanced Spreadsheets (Microsoft Excel) <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a></span>
-<span>&bull;&nbsp;Advanced Database (Microsoft Access) <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a></span>
-<span>&bull;&nbsp;Advanced Presentation (Microsoft PowerPoint) <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a></span>
-</p></li>
-
-<li><strong>ELITE</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>May 2008</em></li>
-
-<li><strong>NHS Health</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Apr 2008</em></li>
-
-<li><strong>NHS Essentials IT Skills Approved Centre Staff Training Programme</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Mar 2008</em></li>	
-
-<li><strong>MSC Training Course</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; Metropolitan Police &emsp; <em>Mar 2007</em><p><span>&bull;&nbsp;Public Order Act</span><span>&bull;&nbsp;Criminal Attempts Act</span><span>&bull;&nbsp;Human Rights Act</span><span>&bull;&nbsp;Police & Criminal Evidence Act</span><span>&bull;&nbsp;Stopping Vehicles & Speaking to Drivers</span><span>&bull;&nbsp;Breach of the Peace</span><span>&bull;&nbsp;Traffic Incidents</span><span>&bull;&nbsp;Going Equipped to Steal</span><span>&bull;&nbsp;Process by Summons</span><span>&bull;&nbsp;Criminal Damage</span><span>&bull;&nbsp;Drunkenness</span><span>&bull;&nbsp;Assaults</span><span>&bull;&nbsp;Domestic Violence</span><span>&bull;&nbsp;Evidence & Actions Book</span><span>&bull;&nbsp;Offensive Weapons</span><span>&bull;&nbsp;Articles with Points & Blades</span><span>&bull;&nbsp;Policing Safely</span><span>&bull;&nbsp;Penalty Notices for Disorder</span><span>&bull;&nbsp;Hate Crime</span><span>&bull;&nbsp;Theft</span><span>&bull;&nbsp;Property Lost & Found</span><span>&bull;&nbsp;Pocket Book Rules</span><span>&bull;&nbsp;Investigation</span><span>&bull;&nbsp;Rights, Fairness & Responsibilities</span><span>&bull;&nbsp;Stop & Search</span><span>&bull;&nbsp;Stop & Account</span><span>&bull;&nbsp;Discretion</span><span>&bull;&nbsp;Arrest Powers</span><span>&bull;&nbsp;Arrest Procedure & Initial Detention</span><span>&bull;&nbsp;Detention, Questioning & Treatment</span><span>&bull;&nbsp;Metropolitan Police District</span><span>&bull;&nbsp;Personal Radios</span><span>&bull;&nbsp;Self-defined Ethnicity</span></p></li>
-
-<li><strong>BCS Level 2 Certificate for IT Users</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>Mar 2007</em></li>
-
-<li><strong>Certificate in Training Delivery Skills</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; The Training Foundation &emsp; <em>Jan 2007</em><p><span>&bull;&nbsp;Assessment of Strengths</span><span>&bull;&nbsp;The Self-fulfilling Prophecy & Body Language</span><span>&bull;&nbsp;Using Questions in Training</span><span>&bull;&nbsp;Writing Learning Objectives</span><span>&bull;&nbsp;Preparing your Training Session</span><span>&bull;&nbsp;Using Visual Aids</span><span>&bull;&nbsp;The Skills Development Cycle</span><span>&bull;&nbsp;Project</span></p></li>
-
-<li><strong>European Computer Driving Licence (ECDL)</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; British Computer Society &emsp; <em>May 2005</em><p><span>&bull;&nbsp;Basic Concepts of Information Technology</span><span>&bull;&nbsp;Using the Computer & Managing Files </span><span>&bull;&nbsp;Word Processing (Microsoft Word)</span><span>&bull;&nbsp;Spreadsheets (Microsoft Excel)</span><span>&bull;&nbsp;Database (Microsoft Access)</span><span>&bull;&nbsp;Presentation (Microsoft PowerPoint)</span><span>&bull;&nbsp;Information & Communication</span><span>&bull;&nbsp;Using IT</span></p></li>
 				
-</ul></article></section>
+				<div>
+					<h3>Organisations</h3>
+					<div>&#xf054;&nbsp;<a href="https://www.bcs.org/">British Computer Society</a></div>
+					<div>&#xf054;&nbsp;<a href="https://www.mensa.org.uk/">Mensa</a></div>
+				</div>
+				
+				<div>
+					<h3>Links</h3>
+					<div>&#xf0ac;&nbsp;<a href="https://nigelgoss.github.io">https://nigelgoss.github.io</a></div>
+					<div>&#xf0ac;&nbsp;<a href="https://nigelgoss.co.uk">https://nigelgoss.co.uk</a></div>
+				</div>
+				
+			</aside>
 			
-<section><h2>Employment History</h2><article>
-
-<p id="s3"><strong>Application Development Manager</strong> &emsp; The Hillingdon Hospitals NHS FT &emsp; <em>May 2018 - Present</em><br>
-<br>I am responsible for managing in-house application developments, ranging from minor enhancements to existing applications, to the creation of new, fully featured, applications. Managing, and developing as part of a team of full-stack developers I am required to have an in-depth knowledge of HTML, CSS, JavaScript, PHP, APIs and T-SQL. Products we use include VSCode, Chrome, IIS, Windows Server, SSMS, Cordova, GitHub, and AWS. My role requires me to be able to create applications from the first line of code to their production deployment and on-going support. The position includes line management responsibility for two Developers.</p>
-
-<hr>
-
-<p><strong>Senior Application Developer</strong> &emsp; The Hillingdon Hospitals NHS FT &emsp; <em>May 2015 - Apr 2018</em><br>
-<br>As above, with the exception of management responsibilities. The position included line management responsibility for one Junior Developer.</p>
-
-<hr>
-
-<p><strong>Senior Information Analyst</strong> &emsp; The Hillingdon Hospitals NHS FT &emsp; <em>Feb 2010 - Apr 2015</em><br>
-<br>I was responsible for the timely and accurate completion of statutory returns and submission of mandated datasets to various external bodies in various formats, including the XML NHS standard. This required me to keep abreast of, and interpret, current information standards, reporting requirements and information policy. I also had responsibility for the design and ongoing development of the trust's in-house management information data warehouse and web-based reporting system (T-SQL and C# ASP.net). This involved data manipulation from a variety of sources, data validation and the writing of views, functions and stored procedures. When required, I was responsible for compiling data for Freedom of Information requests and other ad-hoc data requests. The position included line management responsibility for one Information Analyst.</p>
-
-<hr>
-
-<p><strong>IT Systems Trainer</strong> &emsp; The Hillingdon Hospitals NHS FT &emsp; <em>Feb 2007 - Jan 2010</em><br>
-<br>I was responsible for developing and delivering in-house training programmes and training guides to meet the needs of individuals and groups of Trust staff. This involved delivering training across a spectrum of skill levels and mixed ability groups. I was also accountable for managing the ECDL programme in accordance with the British Computer Society regulations. This included ensuring that candidates were fully registered with the British Computer Society, all aspects of training, administration, invigilation of examinations and the recording of full and accurate data. I was also involved in the project planning of training for the implementation of new systems, both clinical and non-clinical, across the Trust. I was given the role of lead trainer for three systems.</p>
-
-<hr>
-
-<p><strong>Special Constable (Volunteer)</strong> &emsp; Metropolitan Police &emsp; <em>Mar 2007 - Jan 2010</em><br>
-<br>As a Special Constable for the Metropolitan Police I had the same duties, powers and responsibilities as a regular Constable. I made arrests and followed them through the booking-in, interview, charging and releasing processes. I was also involved with drug raids, burglary investigations and anti-terrorism Stop & Searches.</p>	
-
-</article></section>
+			<section style="padding:1em; background-color:var(--c4);">
 			
-<section><h2>Education</h2><article>
+				<h1 style="text-align:center;">Curriculum Vitae</h1>
 
-<p id="s4"><strong>BSc (Hons) Computer Science - First Class</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; University of Westminster &emsp; <em>Sep 2005 - Jun 2009</em><br><span>&bull;&nbsp;Perspectives of Computer Science</span><span>&bull;&nbsp;Introduction to Computer Programming I</span><span>&bull;&nbsp;ICT Tools & Systems</span><span>&bull;&nbsp;Database Introduction</span><span>&bull;&nbsp;Information Fundamentals</span><span>&bull;&nbsp;Introduction to Computer Programming II</span><span>&bull;&nbsp;Database Theory & Practise</span><span>&bull;&nbsp;Computer Organisation & System Software</span><span>&bull;&nbsp;Systems Analysis</span><span>&bull;&nbsp;Rapid Applications Development I</span><span>&bull;&nbsp;Database Systems Development</span><span>&bull;&nbsp;Digital Media Tools</span><span>&bull;&nbsp;Rapid Applications Development II</span><span>&bull;&nbsp;Comparative Information Systems Methodologies</span><span>&bull;&nbsp;Business Enabling Systems</span><span>&bull;&nbsp;Network Operations</span><span>&bull;&nbsp;Project Management I </span><span>&bull;&nbsp;E-Commerce & Intranet Systems</span><span>&bull;&nbsp;Project Management II</span><span>&bull;&nbsp;E-Commerce Systems Implementation</span><span>&bull;&nbsp;Project I</span><span>&bull;&nbsp;Internet Server Solutions</span><span>&bull;&nbsp;Computer Security</span><span>&bull;&nbsp;Project II</span></p>
-
-<hr>
-
-<p><strong>A-Levels</strong> &emsp; Watford Grammar School for Boys &emsp; <em>Sep 2000 - Jul 2003</em><br>
-<br>&bull; Physics - B <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; &bull; Mathematics - C <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; &bull; Chemistry - E <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; &bull; AS Geography - E <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a></p>
-
-<hr>
-
-<p><strong>GCSEs</strong> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> <a href="about:blank" target="_blank"><i class="material-icons">attachment</i></a> &emsp; Watford Grammar School for Boys &emsp; <em>Sep 1998 - Jul 2000</em><br><br><span>&bull;&nbsp;Mathematics - A*</span><span>&bull;&nbsp;Physics - A*</span><span>&bull;&nbsp;German - A*</span><span>&bull;&nbsp;Chemistry - A</span><span>&bull;&nbsp;English Language - A</span><span>&bull;&nbsp;English Literature - A</span><span>&bull;&nbsp;French - A</span><span>&bull;&nbsp;Biology - B</span><span>&bull;&nbsp;Geography - B</span></p>
-
-</article></section>
-
-<section><h2>Projects</h2><article>
-
-<p id="s5"><strong>Hillingdon Care Record</strong> &emsp; Electronic Patient Record with 1,200 distinct users and over 200,000 transactions per month. The app combines data feeds from multiple clinical systems to produce a first point of contact with the patient record</p>
-
-<hr>
-
-<p><strong>hObs</strong> &emsp; Patient Observations app with 1,000 distinct users and over 500,000 transactions per month. The app allows for the recording of patient observations and assists in calculating the NEWS2 score. Other observations are included in the app such as Sepsis, End of Life and Pain Management</p>
-
-<hr>
+				<article>
+				
+					<div style="display:grid; grid-template-columns:auto 1fr; align-items:center; grid-gap:1em; align-items:center;">
+						<h2>About me</h2>
+						<div><div class="hr"></div></div>
+					</div>
+					
+					<p>I'm happily married to a fantastic wife and have two wonderful children. My interest in computing started as a child when I was captivated by being able to type in BASIC code and make the computer do as I wanted. My fascination has never dwindled and I'm still amazed at how computing enables the what was previously thought of as impossible. I've spent the majority of my career working for the NHS as I value being able to make others' lives better.</p><p>I have a keen interest in DevOps and Cloud. I can regularly be found tinkering with the latest technology that has peaked my curiosity. I enjoy spending time with my family, cars, music and cinema. In an attempt to stay healthy I like to walk and cycle.</p>
+					
+				</article>
+				
+				<article>
+				
+					<div style="display:grid; grid-template-columns:auto 1fr; align-items:center; grid-gap:1em; align-items:center;">
+						<h2>Employment History</h2>
+						<div><div class="hr"></div></div>
+					</div>
+					
+					<div style="display:grid; grid-template-columns:1fr 1fr auto;">
 						
-<p><strong>qMan</strong> &emsp; Queue management app that allows patients to check-in and prints tickets, and staff to manage waits and call patients in to clinic rooms</p>
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Application Development Manager</div>
+						<div style="padding:1em; font-weight:bold;">The Hillingdon Hospitals NHS FT</div>
+						<div style="padding:1em; font-weight:bold;">May 2018 - Present</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>I am responsible for managing in-house application developments, ranging from minor enhancements to existing applications, to the creation of new, fully featured, applications. Managing, and developing as part of a team of full-stack developers I am required to have an in-depth knowledge of HTML, CSS, JavaScript, PHP, APIs and T-SQL. Products we use include VSCode, Chrome, IIS, Windows Server, SSMS, Cordova, GitHub, and AWS. My role requires me to be able to create applications from the first line of code to their production deployment and on-going support. The position includes line management responsibility for two Developers.</p>
+						</div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Senior Application Developer</div>
+						<div style="padding:1em; font-weight:bold;">The Hillingdon Hospitals NHS FT</div>
+						<div style="padding:1em; font-weight:bold;">May 2015 - Apr 2018</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>As above, with the exception of management responsibilities. The position included line management responsibility for one Junior Developer.</p>
+						</div>
 
-<hr>
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Senior Information Analyst</div>
+						<div style="padding:1em; font-weight:bold;">The Hillingdon Hospitals NHS FT</div>
+						<div style="padding:1em; font-weight:bold;">Feb 2010 - Apr 2015</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>I was responsible for the timely and accurate completion of statutory returns and submission of mandated datasets to various external bodies in various formats, including the XML NHS standard. This required me to keep abreast of, and interpret, current information standards, reporting requirements and information policy. I also had responsibility for the design and ongoing development of the trust's in-house management information data warehouse and web-based reporting system (T-SQL and C# ASP.net). This involved data manipulation from a variety of sources, data validation and the writing of views, functions and stored procedures. When required, I was responsible for compiling data for Freedom of Information requests and other ad-hoc data requests. The position included line management responsibility for one Information Analyst.</p>
+						</div>
 
-<p><strong>eVetting</strong> &emsp; Referral vetting app that allows various referral documents to be electronically collated and progressed through a vetting process. Decisions are audit trailed and made available to other apps</p>
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>IT Systems Trainer</div>
+						<div style="padding:1em; font-weight:bold;">The Hillingdon Hospitals NHS FT</div>
+						<div style="padding:1em; font-weight:bold;">Feb 2007 - Jan 2010</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>I was responsible for developing and delivering in-house training programmes and training guides to meet the needs of individuals and groups of Trust staff. This involved delivering training across a spectrum of skill levels and mixed ability groups. I was also accountable for managing the ECDL programme in accordance with the British Computer Society regulations. This included ensuring that candidates were fully registered with the British Computer Society, all aspects of training, administration, invigilation of examinations and the recording of full and accurate data. I was also involved in the project planning of training for the implementation of new systems, both clinical and non-clinical, across the Trust. I was given the role of lead trainer for three systems.</p>
+						</div>
 
-<hr>
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Special Constable (Volunteer)</div>
+						<div style="padding:1em; font-weight:bold;">Metropolitan Police</div>
+						<div style="padding:1em; font-weight:bold;">Mar 2007 - Jan 2010</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>As a Special Constable for the Metropolitan Police I had the same duties, powers and responsibilities as a regular Constable. I made arrests and followed them through the booking-in, interview, charging and releasing processes. I was also involved with drug raids, burglary investigations and anti-terrorism Stop & Searches.</p>
+						</div>
 
-<p><strong>RISView</strong> &emsp; A viewer app for the archived data of a now retired radiology application. Implemented to avoid contract charges while maintaining access to the data</p>
+					</div>
+					
+				</article>
 
-<hr>
-
-<p><strong>enCrypt</strong> &emsp; Mortuary management app that allows for tracking of patients through the mortuary process</p>
-
-<hr>
-
-<p><strong>ED Waits</strong> &emsp; Display screen app for use in the Emergency Department. Its purpose is to inform patients of current live waiting times and provide information relevant to their attendance</p>
-
-<hr>
-
-<p><strong>SMS Messaging</strong> &emsp; Reminder and survey text messaging based on extracts from other systems that are not able to natively support SMS messaging</p>
-
-<hr>
-
-<p><strong>DocConvert</strong> &emsp; Document conversion API that converts various document types to web-friendly alternatives</p>
-
-<hr>
-
-<p><strong>COVID-19 Suite</strong> &emsp; A series of, quickly delivered, smaller apps that supported the NHS in dealing with the COVID-19 pandemic<ul>
-<li><strong>Absence Monitoring</strong> &emsp; Efficient tracking of high numbers of staff calling in sick</li>
-<li><strong>Antibody Test Requesting</strong> &emsp; Allowing staff to register and request a test</li>
-<li><strong>Antibody Test Booking</strong> &emsp; Allow staff prioritised for testing to book a test</li>
-<li><strong>Swab Test Monitoring</strong> &emsp; Record swab testing and compliance against requirements</li>
-<li><strong>FITMask Testing</strong> &emsp; Record PPE testing and compliance against requirements</li>
-<li><strong>VacTrac</strong> &emsp; Allow staff to book vaccinations and track performance</li>
-<li><strong>Public Facing Vaccine Bookings & Management app</strong> &emsp; Allow local NHS staff to book vaccinations</li>
-<li><strong>Public Facing Phelbotomy Bookings</strong> &emsp; Pre-booking service for a previously walk-in service</li>
-<li><strong>FITMask Service Bookings</strong> &emsp; Diary management for PPE testing team</li>
-</ul></p>
+				<article>
 				
-</article></section>
+					<div style="display:grid; grid-template-columns:auto 1fr; align-items:center; grid-gap:1em; align-items:center;">
+						<h2>Professional Development</h2>
+						<div><div class="hr"></div></div>
+					</div>
+			
+					<div style="display:grid; grid-template-columns:1fr 1fr auto min-content;">
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>AWS Certified Cloud Practitioner</div>
+						<div style="padding:1em; font-weight:bold;">AWS Training and Certification</div>
+						<div style="padding:1em; font-weight:bold;">Feb 2021</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/aws-certified-cloud-practitioner.pdf" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>AWS Cloud Practitioner Essentials</div>
+						<div style="padding:1em; font-weight:bold;">AWS Training and Certification</div>
+						<div style="padding:1em; font-weight:bold;">Feb 2021</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/aws-cloud-practitioner-essentials.pdf" target="_blank">&#xf0c1;</a></div>
+											
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>AWS Cloud Practitioner Essentials Day</div>
+						<div style="padding:1em; font-weight:bold;">AWS</div>
+						<div style="padding:1em; font-weight:bold;">Sep 2020</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/aws-cloud-practitioner-essentials-day.pdf" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Beauty Therapist Diploma - Distinction</div>
+						<div style="padding:1em; font-weight:bold;">Centre of Excellence</div>
+						<div style="padding:1em; font-weight:bold;">Aug 2020</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/beauty-therapist-diploma.pdf" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Foundation Certificate in Business Analysis</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Jun 2019</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/foundation-certificate-in-business-analysis.pdf" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Safer Design and Implementation</div>
+						<div style="padding:1em; font-weight:bold;">NHS Digital</div>
+						<div style="padding:1em; font-weight:bold;">Jun 2018</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/safer-design-and-implementation.pdf" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>NEWS2</div>
+						<div style="padding:1em; font-weight:bold;">National Early Warning Score</div>
+						<div style="padding:1em; font-weight:bold;">Feb 2018</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/news2.pdf" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Clinical Risk Management</div>
+						<div style="padding:1em; font-weight:bold;">NHS Digital</div>
+						<div style="padding:1em; font-weight:bold;">Mar 2017</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/clinical-risk-management-training.pdf" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Leadership Foundations</div>
+						<div style="padding:1em; font-weight:bold;">NHS Leadership Academy</div>
+						<div style="padding:1em; font-weight:bold;">Sep 2014</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/leadership-foundations.pdf" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Developing Web Applications using Microsoft Visual Studio 2008</div>
+						<div style="padding:1em; font-weight:bold;">Microsoft</div>
+						<div style="padding:1em; font-weight:bold;">Oct 2010</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>BCS Level 1 Award in IT User Skills</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Nov 2009</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>ECDL Approved Centre Staff Training Programme</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Dec 2008</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>PRINCE II Foundation</div>
+						<div style="padding:1em; font-weight:bold;">APM Group Ltd</div>
+						<div style="padding:1em; font-weight:bold;">Oct 2008</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>European Computer Driving Licence (ECDL) Expert</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Aug 2008</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							Advanced Word Processing (Microsoft Word)&nbsp;<a href="about:blank" target="_blank" style="font-family:FontAwesome;">&#xf0c1;</a>&emsp;
+							Advanced Spreadsheets (Microsoft Excel)&nbsp;<a href="about:blank" target="_blank" style="font-family:FontAwesome;">&#xf0c1;</a>&emsp;
+							Advanced Database (Microsoft Access)&nbsp;<a href="about:blank" target="_blank" style="font-family:FontAwesome;">&#xf0c1;</a>&emsp;
+							Advanced Presentation (Microsoft PowerPoint)&nbsp;<a href="about:blank" target="_blank" style="font-family:FontAwesome;">&#xf0c1;</a>
+						</div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>ELITE</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">May 2008</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>NHS Health</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Apr 2008</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>NHS Essentials IT Skills Approved Centre Staff Training Programme</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Mar 2008</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>MSC Training Course</div>
+						<div style="padding:1em; font-weight:bold;">Metropolitan Police</div>
+						<div style="padding:1em; font-weight:bold;">Mar 2007</div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>Public Order Act; Criminal Attempts Act; Human Rights Act; Police & Criminal Evidence Act; Stopping Vehicles & Speaking to Drivers; Breach of the Peace; Traffic Incidents; Going Equipped to Steal; Process by Summons; Criminal Damage; Drunkenness; Assaults; Domestic Violence; Evidence & Actions Book; Offensive Weapons; Articles with Points & Blades; Policing Safely; Penalty Notices for Disorder; Hate Crime; Theft; Property Lost & Found; Pocket Book Rules; Investigation; Rights, Fairness & Responsibilities; Stop & Search; Stop & Account; Discretion; Arrest Powers; Arrest Procedure & Initial Detention; Detention, Questioning & Treatment; Metropolitan Police District; Personal Radios; Self-defined Ethnicity</p>
+						</div>
+
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>BCS Level 2 Certificate for IT Users</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">Mar 2007</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Certificate in Training Delivery Skills</div>
+						<div style="padding:1em; font-weight:bold;">The Training Foundation</div>
+						<div style="padding:1em; font-weight:bold;">Jan 2007</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>Assessment of Strengths; The Self-fulfilling Prophecy & Body Language; Using Questions in Training; Writing Learning Objectives; Preparing your Training Session; Using Visual Aids; The Skills Development Cycle; Project</p>
+						</div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>European Computer Driving Licence (ECDL)</div>
+						<div style="padding:1em; font-weight:bold;">British Computer Society</div>
+						<div style="padding:1em; font-weight:bold;">May 2005</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>Basic Concepts of Information Technology; Using the Computer & Managing Files; Word Processing (Microsoft Word); Spreadsheets (Microsoft Excel); Database (Microsoft Access); Presentation (Microsoft PowerPoint); Information & Communication; Using IT</p>
+						</div>
+						
+					</div>
+					
+				</article>
+				
+				<article>
+				
+					<div style="display:grid; grid-template-columns:auto 1fr; align-items:center; grid-gap:1em; align-items:center;">
+						<h2>Awards</h2>
+						<div><div class="hr"></div></div>
+					</div>
+					
+					<div style="display:grid; grid-template-columns:1fr 1fr auto min-content;">
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Outstanding Teamwork Award - Non Clinical (Runner Up)</div>
+						<div style="padding:1em; font-weight:bold;">Staff Awards</div>
+						<div style="padding:1em; font-weight:bold;">Jun 2019</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/staff-awards-2019.pdf" target="_blank">&#xf0c1;</a></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>HackFest (2<sup>nd</sup> Place)</div>
+						<div style="padding:1em; font-weight:bold;">Digital Health Rewired</div>
+						<div style="padding:1em; font-weight:bold;">Mar 2019</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"></div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>HackFest (3<sup>rd</sup> Place)</div>
+						<div style="padding:1em; font-weight:bold;">Digital Health Summer School</div>
+						<div style="padding:1em; font-weight:bold;">Jul 2018</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"></div>
+					
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Chairman's Innovation Award (Winner)</div>
+						<div style="padding:1em; font-weight:bold;">Staff Awards</div>
+						<div style="padding:1em; font-weight:bold;">May 2018</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="resources/staff-awards-2018.pdf" target="_blank">&#xf0c1;</a></div>
+					
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>Enhancing Care by Sharing Data and Information (Shortlisted)</div>
+						<div style="padding:1em; font-weight:bold;">HSJ Awards</div>
+						<div style="padding:1em; font-weight:bold;">Nov 2016</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"></div>
+					
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div><a href="about:blank" target="_blank">Part-time Continuing Scholarship</a></div>
+						<div style="padding:1em; font-weight:bold;">University of Westminster</div>
+						<div style="padding:1em; font-weight:bold;">Sep 2008</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"></div>
+					
+					</div>
+					
+				</article>
+				
+				<article>
+				
+					<div style="display:grid; grid-template-columns:auto 1fr; align-items:center; grid-gap:1em; align-items:center;">
+						<h2>Education</h2>
+						<div><div class="hr"></div></div>
+					</div>
+					
+					<div style="display:grid; grid-template-columns:1fr 1fr auto min-content;">
+				
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>BSc (Hons) Computer Science - First Class</div>
+						<div style="padding:1em; font-weight:bold;">University of Westminster</div>
+						<div style="padding:1em; font-weight:bold;">Sep 2005 - Jun 2009</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"><a href="about:blank" target="_blank">&#xf0c1;</a></div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							<p>Perspectives of Computer Science; Introduction to Computer Programming I; ICT Tools & Systems; Database Introduction; Information Fundamentals; Introduction to Computer Programming II; Database Theory & Practise; Computer Organisation & System Software; Systems Analysis; Rapid Applications Development I; Database Systems Development; Digital Media Tools; Rapid Applications Development II; Comparative Information Systems Methodologies; Business Enabling Systems; Network Operations; Project Management I ; E-Commerce & Intranet Systems; Project Management II; E-Commerce Systems Implementation; Project I; Internet Server Solutions; Computer Security; Project II</p>
+						</div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>A-Levels</div>
+						<div style="padding:1em; font-weight:bold;">Watford Grammar School for Boys</div>
+						<div style="padding:1em; font-weight:bold;">Sep 2000 - Jul 2003</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"></div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							Physics - B <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							Mathematics - C <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							Chemistry - E <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							AS Geography - E <a href="about:blank" target="_blank">&#xf0c1;</a>
+						</div>
+						
+						<div class="line" style="padding:1em; position:relative; font-weight:bold;"><div class="dot"></div>GCSEs</div>
+						<div style="padding:1em; font-weight:bold;">Watford Grammar School for Boys</div>
+						<div style="padding:1em; font-weight:bold;">Sep 1998 - Jul 2000</div>
+						<div style="padding:1em; font-weight:bold; font-family:FontAwesome;"></div>
+						<div class="line" style="padding:0 1em; grid-column:1/-1;">
+							Mathematics - A* <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							Physics - A* <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							German - A* <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							Chemistry - A <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							English Language - A <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							English Literature - A <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							French - A <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							Biology - B <a href="about:blank" target="_blank">&#xf0c1;</a>&emsp;
+							Geography - B <a href="about:blank" target="_blank">&#xf0c1;</a>
+						</div>
+						
+					</div>
+					
+				</article>
+				
+			</section>
 			
 		</main>
 		
